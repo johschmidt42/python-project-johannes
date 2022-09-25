@@ -16,6 +16,12 @@ fastapi = "^0.85.0"
 uvicorn = {extras = ["standard"], version = "^0.18.3"}
 
 
+[tool.poetry.group.lint.dependencies]
+isort = "^5.10.1"
+black = "^22.8.0"
+flake8 = "^5.0.4"
+mypy = "^0.971"
+
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
