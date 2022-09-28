@@ -14,10 +14,10 @@ lint-flake8:
 	@flake8 .
 
 lint-mypy:
-	@mypy ./src
+	@mypy --config-file pyproject.toml ./src
 
 lint-mypy-report:
-	@mypy ./src --html-report ./mypy_html
+	@mypy --config-file pyproject.toml ./src --html-report ./mypy_html
 
 format: format-black format-isort
 
