@@ -1,3 +1,18 @@
+unit-tests:
+	@pytest
+
+unit-tests-cov:
+	@pytest --cov=src --cov-report term-missing --cov-report=html
+
+unit-tests-cov-fail:
+	@pytest --cov=src --cov-report term-missing --cov-report=html --cov-fail-under=80 --junitxml=pytest.xml | tee pytest-coverage.txt
+
+clean-cov:
+	@rm -rf .coverage
+	@rm -rf htmlcov
+	@rm -rf pytest.xml
+	@rm -rf pytest-coverage.txt
+
 format-black:
 	@black .
 
@@ -14,10 +29,10 @@ lint-flake8:
 	@flake8 .
 
 lint-mypy:
-	@mypy --config-file pyproject.toml ./src
+	@mypy --config-file pyproject.toml .
 
 lint-mypy-report:
-	@mypy --config-file pyproject.toml ./src --html-report ./mypy_html
+	@mypy --config-file pyproject.toml . --html-report ./mypy_html
 
 format: format-black format-isort
 
