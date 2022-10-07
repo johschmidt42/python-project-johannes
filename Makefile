@@ -4,6 +4,9 @@ unit-tests:
 unit-tests-cov:
 	@pytest --cov=src --cov-report term-missing --cov-report=html
 
+unit-tests-cov-fail:
+	@pytest --cov=src --cov-report term-missing --cov-report=html --cov-fail-under=80
+
 clean-cov:
 	@rm -rf .coverage
 	@rm -rf htmlcov
