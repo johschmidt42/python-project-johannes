@@ -1,3 +1,19 @@
+# To do stuff with make, you type `make` in a directory that has a file called
+# "Makefile".  You can also type `make -f <makefile>` to use a different filename.
+#
+# A Makefile is a collection of rules. Each rule is a recipe to do a specific
+# thing, sort of like a grunt task or an npm package.json script.
+#
+# A rule looks like this:
+#
+# <target>: <prerequisites...>
+# 	<commands>
+#
+# The "target" is required. The prerequisites are optional, and the commands
+# are also optional, but you have to have one or the other.
+#
+# Type `make` to show the available targets and a description of each.
+#
 .DEFAULT_GOAL := help
 .PHONY: help
 help:  ## Display this help
