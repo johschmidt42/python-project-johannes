@@ -65,7 +65,7 @@ warn_unreachable = true
 pretty = true
 
 [tool.pytest.ini_options]
-testpaths = ["tests"]
+testpaths = ["src", "tests"]
 addopts = "-p no:cacheprovider" # deactivating pytest caching.
 
 [tool.coverage.report]
