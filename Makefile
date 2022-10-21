@@ -23,15 +23,15 @@ help:  ## Display this help
 
 .PHONY: unit-tests
 unit-tests: ## run unit-tests with pytest
-	@pytest
+	@pytest --doctest-modules
 
 .PHONY: unit-tests-cov
 unit-tests-cov: ## run unit-tests with pytest and show coverage (terminal + html)
-	@pytest --cov=src --cov-report term-missing --cov-report=html
+	@pytest --doctest-modules --cov=src --cov-report term-missing --cov-report=html
 
 .PHONY: unit-tests-cov-fail
 unit-tests-cov-fail: ## run unit tests with pytest and show coverage (terminal + html) & fail if coverage too low & create files for CI
-	@pytest --cov=src --cov-report term-missing --cov-report=html --cov-fail-under=80 --junitxml=pytest.xml | tee pytest-coverage.txt
+	@pytest --doctest-modules --cov=src --cov-report term-missing --cov-report=html --cov-fail-under=80 --junitxml=pytest.xml | tee pytest-coverage.txt
 
 ##@ Formatting
 
