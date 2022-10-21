@@ -3,6 +3,12 @@ site_name: Python Project Johannes
 theme:
   name: "material"
 
+plugins:
+- mkdocstrings:
+    handlers:
+      python:
+        paths: [src]
+
 nav:
   - Index Page: index.md
   - Tutorials: tutorials.md

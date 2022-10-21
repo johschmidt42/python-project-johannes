@@ -34,6 +34,7 @@ trio = "^0.22.0"
 [tool.poetry.group.docs.dependencies]
 mkdocs = "^1.4.1"
 mkdocs-material = "^8.5.6"
+mkdocstrings = {extras = ["python"], version = "^0.19.0"}
 
 [tool.isort]
 profile = "black"
@@ -64,7 +65,7 @@ warn_unreachable = true
 pretty = true
 
 [tool.pytest.ini_options]
-testpaths = ["tests"]
+testpaths = ["src", "tests"]
 addopts = "-p no:cacheprovider" # deactivating pytest caching.
 
 [tool.coverage.report]
