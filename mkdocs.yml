@@ -4,6 +4,7 @@ theme:
   name: "material"
 
 plugins:
+- search:
 - mkdocstrings:
     handlers:
       python:
@@ -15,6 +16,8 @@ nav:
   - How-To-Guides: how-to-guides.md
   - Reference: reference.md
   - Explanation: explanation.md
+
+repo_url: https://github.com/johschmidt42/python-project-johannes
 
 # to navigate with `/site` content correctly
 use_directory_urls: false
