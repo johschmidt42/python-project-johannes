@@ -49,7 +49,5 @@ jobs:
         if: ${{ success() && github.event_name == 'pull_request' }}
         run: |
           set -o pipefail
-          echo '# Coverage report' >> $GITHUB_STEP_SUMMARY
-          echo '```' >> $GITHUB_STEP_SUMMARY
-          cat pytest-coverage.txt >> $GITHUB_STEP_SUMMARY
-          echo '```' >> $GITHUB_STEP_SUMMARY
+          cd ../temp
+          ls
