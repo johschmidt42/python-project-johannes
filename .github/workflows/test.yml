@@ -44,3 +44,11 @@ jobs:
           title: Coverage Report
           pytest-coverage-path: pytest-coverage.txt
           junitxml-path: pytest.xml
+      # add content to GitHub summary
+      - name: Pytest coverage GitHub summary
+        if: ${{ success() && github.event_name == 'pull_request' }}
+        run: |
+          set -o pipefail
+          echo "```text" >> $GITHUB_STEP_SUMMARY
+          cat pytest-coverage.txt >> $GITHUB_STEP_SUMMARY
+          echo "```" >> $GITHUB_STEP_SUMMARY
