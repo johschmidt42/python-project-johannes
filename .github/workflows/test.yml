@@ -49,8 +49,4 @@ jobs:
         if: ${{ success() && github.event_name == 'pull_request' }}
         run: |
           set -o pipefail
-          echo '###root'
-          ls
-          cd ..
-          echo '###up'
-          ls
+          cat ${{ steps.coverageComment.outputs.summaryReport }} >> $GITHUB_STEP_SUMMARY
