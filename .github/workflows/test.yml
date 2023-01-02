@@ -49,5 +49,8 @@ jobs:
         if: ${{ success() && github.event_name == 'pull_request' }}
         run: |
           set -o pipefail
-          cd ../temp
+          echo '###root'
+          ls
+          cd ..
+          echo '###up'
           ls
