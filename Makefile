@@ -90,3 +90,20 @@ clean-docs: ## remove output files from mkdocs
 	@rm -rf site
 
 clean: clean-cov clean-docs ## run all clean commands
+
+##@ Releases
+
+current-version: ## returns the current version
+	@semantic-release print-version --current
+
+next-version: ## returns the next version
+	@semantic-release print-version --next
+
+current-changelog: ## returns the current changelog
+	@semantic-release changelog --released
+
+next-changelog: ## returns the next changelog
+	@semantic-release changelog --unreleased
+
+publish-noop: ## publish command
+	@semantic-release publish --noop
