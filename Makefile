@@ -104,3 +104,6 @@ current-changelog: ## returns the current changelog
 
 next-changelog: ## returns the next changelog
 	@semantic-release changelog --unreleased
+
+publish-noop: ## publish command
+	@semantic-release publish --noop
