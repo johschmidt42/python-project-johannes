@@ -1,0 +1,14 @@
+---
+name: GitHub Actions Environment Variables
+
+on:
+  workflow_dispatch
+
+jobs:
+  Variables:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Dump github variable
+        env:
+          GITHUB_VAR: ${{ toJson(github) }}
+        run: echo "$GITHUB_VAR"
