@@ -83,6 +83,7 @@ version_variable = "src/example_app/__init__.py:__version__"
 version_toml = "pyproject.toml:tool.poetry.version"
 version_source = "tag"
 commit_version_number = true # required for version_source = "tag"
+commit_message = "{version} [skip ci]" # skip triggering ci pipelines for version commits
 tag_commit = true
 upload_to_pypi = false
 upload_to_release = false
