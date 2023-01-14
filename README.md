@@ -20,7 +20,7 @@ In each subsequent section, tools will be automated and badges will be added to 
 - [Setting up Python Projects: Part II](https://medium.com/@johschmidt42/setting-up-python-projects-part-ii-c4bd84b709d1)
 - [Setting up Python Projects: Part III](https://medium.com/@johschmidt42/setting-up-python-projects-part-iii-56aafde8ae0b)
 - [Setting up Python Projects: Part IV](https://medium.com/@johschmidt42/setting-up-python-projects-part-iv-82059eba4ca4)
-- Setting up Python Projects: Part V
+- [Setting up Python Projects: Part V](https://johschmidt42.medium.com/setting-up-python-projects-part-v-206df3c1e3d3)
 - Setting up Python Projects: Part VI
 
 ## :blue_book: Documentation
