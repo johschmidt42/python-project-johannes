@@ -21,3 +21,19 @@ gitGraph
    merge develop tag: "0.1.3"
    commit tag: "0.1.4"
 ```
+
+## GitHub Actions Flow
+
+```mermaid
+flowchart
+    C[Commit to 'main'] -- push event --> O[Orchestrator]
+    O -- calling --> T[Run Testing pipeline] & L[Run Linting pipeline]
+    T & L -- Success --> R[Run Release pipeline]
+    R -- Version bump detected --> C2[Commit to 'main']
+    C2 -- Version bump --> Release[Release]  
+    Release -- release event --> D[Run Documentation pipeline]
+```
+
+A commit to `main`, usually a **Pull Request** will run the `Testing`, the `Linting` pipeline to discover bugs early.
+If these pipeline succeed and a version bump was detected it will create a version bump commit to `main` that changes the `version` strings in the repository.
+A release event (published) will trigger the `Documentation` pipeline to update the documentation hosted with GitHub Pages. 
