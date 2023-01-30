@@ -107,3 +107,14 @@ next-changelog: ## returns the next changelog
 
 publish-noop: ## publish command
 	@semantic-release publish --noop
+
+##@ Build
+
+build: ## docker build
+	@docker build --file Dockerfile --tag project:latest .
+
+run: ## docker run app
+	@docker run -p 9000:80 -it --rm project:latest
+
+run-bash: ## docker run with bash
+	@docker run -it --rm project:latest /bin/bash
