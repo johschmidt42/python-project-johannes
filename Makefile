@@ -1,5 +1,5 @@
 # To do stuff with make, you type `make` in a directory that has a file called
-# "Makefile".  You can also type `make -f <makefile>` to use a different filename.
+# "Makefile". You can also type `make -f <makefile>` to use a different filename.
 #
 # A Makefile is a collection of rules. Each rule is a recipe to do a specific
 # thing, sort of like a grunt task or an npm package.json script.
@@ -105,7 +105,7 @@ current-changelog: ## returns the current changelog
 next-changelog: ## returns the next changelog
 	@semantic-release changelog --unreleased
 
-publish-noop: ## publish command
+publish-noop: ## publish command (noop="no operation mode")
 	@semantic-release publish --noop
 
 ##@ Build
