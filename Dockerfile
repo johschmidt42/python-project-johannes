@@ -2,6 +2,9 @@ FROM python:3.10-slim as base
 
 WORKDIR /app
 
+# ignore 'Running pip as the root user...' warning
+ENV PIP_ROOT_USER_ACTION=ignore
+
 # update pip
 RUN pip install --upgrade pip
 
