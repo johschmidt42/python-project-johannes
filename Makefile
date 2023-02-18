@@ -112,7 +112,7 @@ publish-noop: ## publish command (noop="no operation mode")
 ##@ Build
 
 build: ## docker build
-	@docker build --file Dockerfile --tag project:latest .
+	@docker build --file Dockerfile --tag project:latest --target production .
 
 run: ## docker run app
 	@docker run -p 9000:80 -it --rm project:latest
