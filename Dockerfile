@@ -8,7 +8,7 @@ RUN pip install --upgrade pip
 FROM base as builder
 
 # install poetry
-ENV POETRY_VERSION=1.2.0
+ENV POETRY_VERSION=1.3.1
 RUN pip install "poetry==$POETRY_VERSION"
 
 # copy application
