@@ -85,6 +85,7 @@ clean-cov: ## remove output files from pytest & coverage
 	@rm -rf htmlcov
 	@rm -rf pytest.xml
 	@rm -rf pytest-coverage.txt
+	@rm -rf dist
 
 clean-docs: ## remove output files from mkdocs
 	@rm -rf site
