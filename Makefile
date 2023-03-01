@@ -1,5 +1,5 @@
 # To do stuff with make, you type `make` in a directory that has a file called
-# "Makefile".  You can also type `make -f <makefile>` to use a different filename.
+# "Makefile". You can also type `make -f <makefile>` to use a different filename.
 #
 # A Makefile is a collection of rules. Each rule is a recipe to do a specific
 # thing, sort of like a grunt task or an npm package.json script.
@@ -85,6 +85,7 @@ clean-cov: ## remove output files from pytest & coverage
 	@rm -rf htmlcov
 	@rm -rf pytest.xml
 	@rm -rf pytest-coverage.txt
+	@rm -rf dist
 
 clean-docs: ## remove output files from mkdocs
 	@rm -rf site
@@ -105,5 +106,29 @@ current-changelog: ## returns the current changelog
 next-changelog: ## returns the next changelog
 	@semantic-release changelog --unreleased
 
-publish-noop: ## publish command
+publish-noop: ## publish command (noop="no operation mode")
 	@semantic-release publish --noop
+
+##@ Docker
+
+build: ## docker build
+	@docker build --file Dockerfile --tag project:latest --target production .
+
+run: ## docker run app
+	@docker run -p 9000:80 -it --rm project:latest
+
+run-bash: ## docker run with bash
+	@docker run -it --rm project:latest /bin/bash
+
+login: ## login to ghcr.io using a personal access token (PAT)
+	@if [ -z "$(CR_PAT)" ]; then\
+		echo "CR_PAT is not set";\
+	else\
+		echo $(CR_PAT) | docker login ghcr.io -u johschmidt42 --password-stdin;\
+	fi
+
+tag: ## tag docker image to ghcr.io/johschmidt42/project:latest
+	@docker tag project:latest ghcr.io/johschmidt42/project:latest
+
+push: tag ## docker push to container registry (ghcr.io)
+	@docker push ghcr.io/johschmidt42/project:latest
