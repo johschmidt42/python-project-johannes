@@ -2,11 +2,8 @@
 name: Build & Push
 
 on:
-#  release:
-#    types: [published]
-  push:
-    branches:
-      - feat/docker
+  release:
+    types: [published]
 
 jobs:
   build_and_push:
@@ -32,10 +29,10 @@ jobs:
         with:
           context: .
           push: true
-          tags: ghcr.io/${{ github.repository }}:v9.9.9
+          tags: ghcr.io/${{ github.repository }}:${{ github.ref_name }}
           labels: |
             org.opencontainers.image.source=https://github.com/johschmidt42/python-project-johannes
             org.opencontainers.image.title=PYTHON_PROJECT_JOHANNES
-            org.opencontainers.image.version=v9.9.9
+            org.opencontainers.image.version=${{ github.ref_name }}
           target: production
           github-token: ${{ secrets.GH_TOKEN }}
