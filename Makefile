@@ -109,7 +109,7 @@ next-changelog: ## returns the next changelog
 publish-noop: ## publish command (noop="no operation mode")
 	@semantic-release publish --noop
 
-##@ Build
+##@ Docker
 
 build: ## docker build
 	@docker build --file Dockerfile --tag project:latest --target production .
@@ -119,3 +119,16 @@ run: ## docker run app
 
 run-bash: ## docker run with bash
 	@docker run -it --rm project:latest /bin/bash
+
+login: ## login to ghcr.io using a personal access token (PAT)
+	@if [ -z "$(CR_PAT)" ]; then\
+		echo "CR_PAT is not set";\
+	else\
+		echo $(CR_PAT) | docker login ghcr.io -u johschmidt42 --password-stdin;\
+	fi
+
+tag: ## tag docker image to ghcr.io/johschmidt42/project:latest
+	@docker tag project:latest ghcr.io/johschmidt42/project:latest
+
+push: tag ## docker push to container registry (ghcr.io)
+	@docker push ghcr.io/johschmidt42/project:latest
