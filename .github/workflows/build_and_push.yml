@@ -32,10 +32,10 @@ jobs:
         with:
           context: .
           push: true
-          tags: ghcr.io/${{ github.repository }}:${{ github.ref_name }}
+          tags: ghcr.io/${{ github.repository }}:v9.9.9
           labels: |
             org.opencontainers.image.source=https://github.com/johschmidt42/python-project-johannes
             org.opencontainers.image.title=PYTHON_PROJECT_JOHANNES
-            org.opencontainers.image.version=${{ github.ref_name }}
+            org.opencontainers.image.version=v9.9.9
           target: production
           github-token: ${{ secrets.GH_TOKEN }}
