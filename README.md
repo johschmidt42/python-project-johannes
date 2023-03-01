@@ -1,6 +1,7 @@
 [![Release](https://img.shields.io/github/v/release/johschmidt42/python-project-johannes?color=brightgreen&sort=semver)](https://github.com/johschmidt42/python-project-johannes/releases/latest)
 [![Linting](https://github.com/johschmidt42/python-project-johannes/actions/workflows/lint.yml/badge.svg?branch=main)](https://github.com/johschmidt42/python-project-johannes/actions/workflows/lint.yml)
 [![Testing](https://github.com/johschmidt42/python-project-johannes/actions/workflows/test.yml/badge.svg?branch=main)](https://github.com/johschmidt42/python-project-johannes/actions/workflows/test.yml)
+[![Build](https://github.com/johschmidt42/python-project-johannes/actions/workflows/build.yml/badge.svg?branch=main)](https://github.com/johschmidt42/python-project-johannes/actions/workflows/build.yml)
 [![Documentation](https://github.com/johschmidt42/python-project-johannes/actions/workflows/pages.yml/badge.svg?branch=main)](https://github.com/johschmidt42/python-project-johannes/actions/workflows/pages.yml)
 
 # :beginner: Setting up Python Projects :beginner:
@@ -80,7 +81,7 @@ flowchart
     T & L & B -- Success --> R[Run Release pipeline]
     R -- Version bump detected --> C2[Commit to 'main']
     C2 -- Version bump --> Release[Release]  
-    Release -- release event --> D[Run Documentation pipeline]
+    Release -- release event --> D[Run Documentation pipeline] & BP[Run Build & Push pipeline]
 ```
 
 Commits made to the main branch, typically through a Pull Request, will trigger a testing and linting pipeline to
