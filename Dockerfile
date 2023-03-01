@@ -32,11 +32,8 @@ COPY --from=builder /app/dist/*.whl /app/
 # install package
 RUN pip install /app/*.whl
 
-# install gunicorn (ASGI web implementation)
-RUN pip install gunicorn==20.1.0
-
 # copy entrypoint of the app
 COPY ["main.py", "./"]
 
 # command to run
-CMD ["gunicorn", "main:app", "--bind", "0.0.0.0:80", "--workers", "1", "--worker-class", "uvicorn.workers.UvicornWorker"]
+CMD ["uvicorn", "main:app","--host", "0.0.0.0", "--port", "80", "--workers", "1"]
