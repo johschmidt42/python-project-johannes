@@ -76,8 +76,8 @@ The following flowchart illustrates the flow of workflows when committing to the
 ```mermaid
 flowchart
     C[Commit to 'main'] -- push event --> O[Orchestrator]
-    O -- calling --> T[Run Testing pipeline] & L[Run Linting pipeline]
-    T & L -- Success --> R[Run Release pipeline]
+    O -- calling --> T[Run Testing pipeline] & L[Run Linting pipeline] & B[Run Build pipeline]
+    T & L & B -- Success --> R[Run Release pipeline]
     R -- Version bump detected --> C2[Commit to 'main']
     C2 -- Version bump --> Release[Release]  
     Release -- release event --> D[Run Documentation pipeline]
