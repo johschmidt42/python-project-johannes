@@ -37,6 +37,6 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ github.repository }}:latest
+          tags: ghcr.io/${{ github.repository }}:latest
           target: production
           github-token: ${{ secrets.GH_TOKEN }}
