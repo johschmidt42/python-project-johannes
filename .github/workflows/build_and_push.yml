@@ -19,11 +19,6 @@ jobs:
           ref: ${{ github.head_ref }}
           token: ${{ secrets.GH_TOKEN }}
           fetch-depth: 0
-      # build
-      - name: Build docker
-        run: |
-          set -o pipefail
-          echo "TODO"
       # login to container registry
       - name: Login to GitHub Container Registry (ghcr.io)
         uses: docker/login-action@v2
@@ -38,5 +33,6 @@ jobs:
           context: .
           push: true
           tags: ghcr.io/${{ github.repository }}:latest
+          labels: org.opencontainers.image.source=https://github.com/johschmidt42/python-project-johannes
           target: production
           github-token: ${{ secrets.GH_TOKEN }}
