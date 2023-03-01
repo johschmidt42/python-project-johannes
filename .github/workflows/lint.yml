@@ -4,7 +4,7 @@ name: Linting
 on:
   pull_request:
     branches:
-      - non-existing-branch
+      - main
   workflow_call:
 
 jobs:
