@@ -26,13 +26,26 @@ jobs:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GH_TOKEN }}
-      # build & push
-      - name: Build and push
-        uses: docker/build-push-action@v4
-        with:
-          context: .
-          push: true
-          tags: ghcr.io/${{ github.repository }}:latest
-          labels: org.opencontainers.image.source=https://github.com/johschmidt42/python-project-johannes
-          target: production
-          github-token: ${{ secrets.GH_TOKEN }}
+      - name: Docker meta
+        id: meta
+        uses: docker/metadata-action@v4
+      - name: Print docker meta
+        run: |
+          set -o pipefail
+          echo "${{ steps.meta.outputs.tags }}"
+          echo "${{ steps.meta.outputs.version }}"
+          echo "${{ steps.meta.outputs.json }}"
+
+#      # build & push
+#      - name: Build and push
+#        uses: docker/build-push-action@v4
+#        with:
+#          context: .
+#          push: true
+#          tags: ghcr.io/${{ github.repository }}:latest
+#          labels: |
+#            org.opencontainers.image.source=https://github.com/johschmidt42/python-project-johannes
+#            org.opencontainers.image.title=PYTHON_PROJECT_JOHANNES
+##            org.opencontainers.image.version=
+#          target: production
+#          github-token: ${{ secrets.GH_TOKEN }}
