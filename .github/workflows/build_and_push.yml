@@ -34,6 +34,7 @@ jobs:
         uses: docker/build-push-action@v4
         with:
           push: true
-          tags: ${{ github.repository }}/latest
+          tags: ${{ github.repository }}
+          labels: latest
           target: production
           github-token: ${{ github.token }}
