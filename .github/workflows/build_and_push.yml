@@ -26,16 +26,11 @@ jobs:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GH_TOKEN }}
-      - name: Docker meta
-        id: meta
-        uses: docker/metadata-action@v4
-        with:
-          images: ghcr.io/${{ github.repository }}
-          tags: type=semver,pattern={{version}}
-      - name: Print docker meta
-        run: |
-          set -o pipefail
-          echo "${{ github.ref_name}}"
+      - name: Dump github variable
+        env:
+          GITHUB_VAR: ${{ toJson(github) }}
+        run: echo "$GITHUB_VAR"
+
 
 
 #      # build & push
