@@ -35,9 +35,7 @@ jobs:
       - name: Print docker meta
         run: |
           set -o pipefail
-          echo "${{ steps.meta.outputs.tags }}"
-          echo "${{ steps.meta.outputs.version }}"
-          echo "${{ steps.meta.outputs.json }}"
+          echo "${{ github.ref_name}}"
 
 
 #      # build & push
