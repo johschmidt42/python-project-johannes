@@ -11,8 +11,8 @@ license = "MIT"
 [tool.poetry.dependencies]
 python = "^3.10"
 httpx = "^0.23.0"
-fastapi = "^0.85.0"
-uvicorn = {extras = ["standard"], version = "^0.18.3"}
+fastapi = "^0.95.0"
+uvicorn = {extras = ["standard"], version = "^0.21.1"}
 
 
 [tool.poetry.group.lint.dependencies]
