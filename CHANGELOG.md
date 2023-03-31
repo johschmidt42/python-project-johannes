@@ -2,6 +2,13 @@
 
 <!--next-version-placeholder-->
 
+## v0.4.1 (2023-03-31)
+### Fix
+* Badge status in readme ([#14](https://github.com/johschmidt42/python-project-johannes/issues/14)) ([`573fc6e`](https://github.com/johschmidt42/python-project-johannes/commit/573fc6e022f0372fe08fc26014232d36d2b0580c))
+
+### Documentation
+* Add Run Build & Push pipeline to GitHub Actions Flow & add build badge ([`6300c0b`](https://github.com/johschmidt42/python-project-johannes/commit/6300c0b67b9da172902cecf038d2a88ce17030c8))
+
 ## v0.4.0 (2023-03-01)
 ### Feature
 * Add pipelines build and build & push ([#13](https://github.com/johschmidt42/python-project-johannes/issues/13)) ([`e1bbb91`](https://github.com/johschmidt42/python-project-johannes/commit/e1bbb91ec347a831fd2a0c83fddfedf7fd0ce894))
