@@ -84,8 +84,13 @@ flowchart
     Release -- release event --> D[Run Documentation pipeline] & BP[Run Build & Push pipeline]
 ```
 
-Commits made to the main branch, typically through a Pull Request, will trigger a testing and linting pipeline to
+Commits made to the main branch, typically through a Pull Request, will trigger a testing, linting & build pipeline to
 identify bugs early.
 If these pipelines are successful and a version bump is detected, a version bump commit will be created on the main
 branch, updating the version strings in the repository.
 Releasing an event will trigger the documentation pipeline, updating the documentation hosted on GitHub Pages.
+
+**Badges**:
+The workflows `test.yml`, `lint.yml` & `build.yml` are required for the badges to work.
+Even though they are triggered by the orchestrator, they must run on their own.
+As a consequence a pipeline (test, lint, build) runs twice for every commit to the default branch main :expressionless:.
