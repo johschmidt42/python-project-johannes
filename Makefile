@@ -112,10 +112,10 @@ publish-noop: ## publish command (noop="no operation mode")
 ##@ Docker
 
 build: ## docker build
-	@docker build --file Dockerfile --tag project:latest --target production .
+	@docker build --file Dockerfile --tag project:azure --target production .
 
 run: ## docker run app
-	@docker run -p 9000:80 -it --rm project:latest
+	@docker run -p 9000:80 -it --rm project:azure
 
 run-bash: ## docker run with bash
 	@docker run -it --rm project:latest /bin/bash
@@ -128,7 +128,7 @@ login: ## login to ghcr.io using a personal access token (PAT)
 	fi
 
 tag: ## tag docker image to ghcr.io/johschmidt42/project:latest
-	@docker tag project:latest ghcr.io/johschmidt42/project:latest
+	@docker tag project:azure ghcr.io/johschmidt42/project:azure
 
 push: tag ## docker push to container registry (ghcr.io)
-	@docker push ghcr.io/johschmidt42/project:latest
+	@docker push ghcr.io/johschmidt42/project:azure
