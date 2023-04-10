@@ -17,12 +17,12 @@ potentially **opinionated**, approach with a **selection of tools**.
 It is designed to be accessible for beginners while also covering some advanced topics.
 In each subsequent section, tools will be automated and badges will be added to the project to track progress.
 
-- [Setting up Python Projects: Part I](https://medium.com/@johschmidt42/setting-up-python-projects-part-i-408603868c08)
-- [Setting up Python Projects: Part II](https://medium.com/@johschmidt42/setting-up-python-projects-part-ii-c4bd84b709d1)
-- [Setting up Python Projects: Part III](https://medium.com/@johschmidt42/setting-up-python-projects-part-iii-56aafde8ae0b)
-- [Setting up Python Projects: Part IV](https://medium.com/@johschmidt42/setting-up-python-projects-part-iv-82059eba4ca4)
+- [Setting up Python Projects: Part I](https://johschmidt42.medium.com/setting-up-python-projects-part-i-408603868c08)
+- [Setting up Python Projects: Part II](https://johschmidt42.medium.com/setting-up-python-projects-part-ii-c4bd84b709d1)
+- [Setting up Python Projects: Part III](https://johschmidt42.medium.com/setting-up-python-projects-part-iii-56aafde8ae0b)
+- [Setting up Python Projects: Part IV](https://johschmidt42.medium.com/setting-up-python-projects-part-iv-82059eba4ca4)
 - [Setting up Python Projects: Part V](https://johschmidt42.medium.com/setting-up-python-projects-part-v-206df3c1e3d3)
-- Setting up Python Projects: Part VI
+- [Setting up Python Projects: Part VI](https://johschmidt42.medium.com/setting-up-python-projects-part-vi-cbdbf28eff53)
 
 ## :blue_book: Documentation
 
@@ -88,9 +88,10 @@ Commits made to the main branch, typically through a Pull Request, will trigger 
 identify bugs early.
 If these pipelines are successful and a version bump is detected, a version bump commit will be created on the main
 branch, updating the version strings in the repository.
-Releasing an event will trigger the documentation pipeline, updating the documentation hosted on GitHub Pages.
+Publishing a new release will trigger the documentation pipeline, updating the documentation hosted on GitHub Pages, 
+and trigger the build & push pipeline to build a new docker image and upload it to the GitHub container registry.
 
 **Badges**:
 The workflows `test.yml`, `lint.yml` & `build.yml` are required for the badges to work.
 Even though they are triggered by the orchestrator, they must run on their own.
-As a consequence a pipeline (test, lint, build) runs twice for every commit to the default branch main :expressionless:.
+As a consequence, a pipeline (test, lint, build) runs twice for every commit to the default branch main :expressionless:.
