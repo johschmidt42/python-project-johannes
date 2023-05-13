@@ -1017,6 +1017,21 @@ files = [
 ]
 
 [[package]]
+name = "mkdocs-render-swagger-plugin"
+version = "0.0.4"
+description = "MKDocs plugin for rendering swagger & openapi files."
+category = "dev"
+optional = false
+python-versions = ">=3.6"
+files = [
+    {file = "mkdocs-render-swagger-plugin-0.0.4.tar.gz", hash = "sha256:0d7880076de624640d6f9e2bf4689a484db0597d43c5d6cd1b2ccad0dfe469c2"},
+    {file = "mkdocs_render_swagger_plugin-0.0.4-py3-none-any.whl", hash = "sha256:5936889a0405947ff5c9e2b5c4393fe26dbd3dd1e2d03ec8a38ff826ee105866"},
+]
+
+[package.dependencies]
+mkdocs = "*"
+
+[[package]]
 name = "mkdocstrings"
 version = "0.19.1"
 description = "Automatic documentation from sources, for MkDocs."
@@ -2256,4 +2271,4 @@ testing = ["big-O", "flake8 (<5)", "jaraco.functools", "jaraco.itertools", "more
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.10"
-content-hash = "965d459568a9159e6dc4028b29a6eacd512066796ccaefdaab5df8c6490006cd"
+content-hash = "e09d2f3fe243c707edcf7e4a44b0c8493e56d42d04ffdb0f18cb0e129ff04faa"
