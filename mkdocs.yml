@@ -1,21 +1,18 @@
 site_name: Python Project Johannes
 
+docs_dir: docs
+
 theme:
   name: "material"
 
 plugins:
-- search:
-- mkdocstrings:
-    handlers:
-      python:
-        paths: [src]
+  - search:
+  - mkdocstrings:
+      handlers:
+        python:
+          paths: [ src ]
 
-nav:
-  - Index Page: index.md
-  - Tutorials: tutorials.md
-  - How-To-Guides: how-to-guides.md
-  - Reference: reference.md
-  - Explanation: explanation.md
+nav: [ ]
 
 repo_url: https://github.com/johschmidt42/python-project-johannes
 
