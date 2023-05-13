@@ -72,11 +72,14 @@ lint: lint-black lint-isort lint-flake8 lint-mypy ## run all linters
 
 ##@ Documentation
 
-docs-build: ## build documentation locally
+docs-build: create_openapi ## build documentation locally
 	@mkdocs build
 
 docs-deploy: ## build & deploy documentation to "gh-pages" branch
 	@mkdocs gh-deploy -m "docs: update documentation" -v --force
+
+create_openapi: ## create openapi.json
+	@python3 scripts/create_openapi_json.py
 
 ##@ Clean-up
 
