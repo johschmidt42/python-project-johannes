@@ -92,6 +92,7 @@ clean-cov: ## remove output files from pytest & coverage
 
 clean-docs: ## remove output files from mkdocs
 	@rm -rf site
+	@rm -rf docs/openapi.json
 
 clean: clean-cov clean-docs ## run all clean commands
 
