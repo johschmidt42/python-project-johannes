@@ -4,6 +4,10 @@ docs_dir: docs
 
 theme:
   name: "material"
+  features:
+    - navigation.tabs
+    - navigation.indexes
+    - navigation.instant
 
 plugins:
   - search:
