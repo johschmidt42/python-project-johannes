@@ -35,5 +35,8 @@ RUN pip install /app/*.whl
 # copy entrypoint of the app
 COPY ["main.py", "./"]
 
+# Remove linux-libc-dev (CVE-2023-31484)
+RUN apt-get remove -y --allow-remove-essential linux-libc-dev
+
 # command to run
 CMD ["uvicorn", "main:app","--host", "0.0.0.0", "--port", "80", "--workers", "1"]

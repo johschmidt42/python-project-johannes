@@ -136,3 +136,6 @@ tag: ## tag docker image to ghcr.io/johschmidt42/project:latest
 
 push: tag ## docker push to container registry (ghcr.io)
 	@docker push ghcr.io/johschmidt42/project:latest
+
+scan: ## scan the docker image for vulnerabilities
+	@trivy image project:latest --scanners vuln --format table --severity  CRITICAL,HIGH --ignorefile .trivyignore
