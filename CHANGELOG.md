@@ -2,6 +2,12 @@
 
 <!--next-version-placeholder-->
 
+## v0.4.3 (2023-09-05)
+
+### Fix
+
+* Add base-image hash & remove line that removes linux-libc-dev (not available in latest base image) ([`11187cb`](https://github.com/johschmidt42/python-project-johannes/commit/11187cb484bd73a6fc311e3515f05c27e0d3ee50))
+
 ## v0.4.2 (2023-07-21)
 ### Fix
 * Remove linux-libc-dev (CVE-2023-31484) ([#19](https://github.com/johschmidt42/python-project-johannes/issues/19)) ([`6c3b14d`](https://github.com/johschmidt42/python-project-johannes/commit/6c3b14d4f72c74d5c705d58fd5380884ae9c065d))
