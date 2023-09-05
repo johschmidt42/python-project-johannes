@@ -19,14 +19,14 @@ from starlette.requests import HTTPConnection
 
 from example_app import __version__
 
-user_router = APIRouter(prefix="/users", tags=["Users"])
+router = APIRouter(prefix="/api", tags=["Users"])
 
 
 class PayLoad(BaseModel):
     token: str
 
 
-@user_router.post(path="/decode", status_code=status.HTTP_200_OK)
+@router.post(path="/decode", status_code=status.HTTP_200_OK)
 def decode_token(body: PayLoad) -> dict:
     """
     Decodes token.
@@ -37,7 +37,7 @@ def decode_token(body: PayLoad) -> dict:
     return decoded_token
 
 
-@user_router.post(path="/managed-identity-token", status_code=status.HTTP_200_OK)
+@router.post(path="/managed-identity-token", status_code=status.HTTP_200_OK)
 def get_managed_identity_token(client_id: str) -> dict:
     """
     Gets a token from the managed identity.
@@ -137,7 +137,7 @@ app.add_middleware(
 def get_routers() -> routing.APIRouter:
     router = APIRouter()
 
-    router.include_router(user_router, dependencies=[Depends(oauth2())])
+    router.include_router(router, dependencies=[Depends(oauth2())])
 
     return router
 
