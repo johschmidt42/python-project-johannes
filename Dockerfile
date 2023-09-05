@@ -1,4 +1,4 @@
-FROM python:3.10-slim as base
+FROM python:3.10-slim@sha256:83f353e03a40bbebc8d2fe1fcd2d7357d8613e92512c556b02483a670eeb7211 as base
 
 WORKDIR /app
 
@@ -34,9 +34,6 @@ RUN pip install /app/*.whl
 
 # copy entrypoint of the app
 COPY ["main.py", "./"]
-
-# Remove linux-libc-dev (CVE-2023-31484)
-RUN apt-get remove -y --allow-remove-essential linux-libc-dev
 
 # command to run
 CMD ["uvicorn", "main:app","--host", "0.0.0.0", "--port", "80", "--workers", "1"]
