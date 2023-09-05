@@ -25,7 +25,12 @@ jobs:
           cache: 'poetry'
       # install requirements (including dev dependencies)
       - name: Install requirements
-        run: poetry install --only docs
+        run: poetry install --with docs
+        # Create the openapi.json from the app
+      - name: Create openapi.json
+        run: |
+         set -o pipefail
+         poetry run make create_openapi
       # build & deploy docs
       - name: Build docs
         run: |

@@ -2,6 +2,14 @@
 
 <!--next-version-placeholder-->
 
+## v0.4.2 (2023-07-21)
+### Fix
+* Remove linux-libc-dev (CVE-2023-31484) ([#19](https://github.com/johschmidt42/python-project-johannes/issues/19)) ([`6c3b14d`](https://github.com/johschmidt42/python-project-johannes/commit/6c3b14d4f72c74d5c705d58fd5380884ae9c065d))
+
+### Documentation
+* Add swagger docs ([#18](https://github.com/johschmidt42/python-project-johannes/issues/18)) ([`5b5b41b`](https://github.com/johschmidt42/python-project-johannes/commit/5b5b41b08acbbf51d812787fb8d405dc67e4c9c2))
+* Update README.md ([`270a2f3`](https://github.com/johschmidt42/python-project-johannes/commit/270a2f36edb65921fd23e6d040e31ee9de35ebf2))
+
 ## v0.4.1 (2023-03-31)
 ### Fix
 * Badge status in readme ([#14](https://github.com/johschmidt42/python-project-johannes/issues/14)) ([`573fc6e`](https://github.com/johschmidt42/python-project-johannes/commit/573fc6e022f0372fe08fc26014232d36d2b0580c))

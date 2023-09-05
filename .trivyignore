@@ -1,0 +1,2 @@
+# vulnerabilities to be ignored by trivy are added here
+CVE-2023-31484
