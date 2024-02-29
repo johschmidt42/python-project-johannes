@@ -2,7 +2,7 @@ repo_name: johschmidt42/python-project-johannes
 report_id: 9867cd64e5584b3ef544960252e91494
 version: 0.1
 repo_type: Public
-timestamp: '2024-01-05T08:51:31+00:00'
+timestamp: '2024-02-29T18:38:02+00:00'
 requested_by: actions-user
 provider: github
 branch: main
@@ -78,6 +78,19 @@ tools:
   detection_source: pyproject.toml
   last_updated_by: Johannes Schmidt
   last_updated_on: 2023-07-22 12:15:55.000000000 Z
+  vulnerabilities:
+  - name: 'Duplicate Advisory: FastAPI Content-Type Header ReDoS'
+    cve_id: 
+    cve_url: https://github.com/advisories/GHSA-qf9m-vfgh-m389
+    detected_date: Feb 6
+    severity: high
+    first_patched: 0.109.1
+  - name: python-multipart vulnerable to Content-Type Header ReDoS
+    cve_id: CVE-2024-24762
+    cve_url: https://github.com/advisories/GHSA-2jv5-9r88-3w3p
+    detected_date: Feb 17
+    severity: high
+    first_patched: 0.109.1
 - name: httpx
   description: The next generation HTTP client
   package_url: https://pypi.org/project/httpx
