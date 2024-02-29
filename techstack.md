@@ -4,8 +4,8 @@
 johschmidt42/python-project-johannes is built on the following main stack:
 
 - [Python](https://www.python.org) – Languages
-- [GitHub Actions](https://github.com/features/actions) – Continuous Integration
 - [Docker](https://www.docker.com/) – Virtual Machine Platforms & Containers
+- [GitHub Actions](https://github.com/features/actions) – Continuous Integration
 
 Full tech stack [here](/techstack.md)
 
@@ -16,8 +16,8 @@ Full tech stack [here](/techstack.md)
 johschmidt42/python-project-johannes is built on the following main stack:
 
 - <img width='25' height='25' src='https://img.stackshare.io/service/993/pUBY5pVj.png' alt='Python'/> [Python](https://www.python.org) – Languages
-- <img width='25' height='25' src='https://img.stackshare.io/service/11563/actions.png' alt='GitHub Actions'/> [GitHub Actions](https://github.com/features/actions) – Continuous Integration
 - <img width='25' height='25' src='https://img.stackshare.io/service/586/n4u37v9t_400x400.png' alt='Docker'/> [Docker](https://www.docker.com/) – Virtual Machine Platforms & Containers
+- <img width='25' height='25' src='https://img.stackshare.io/service/11563/actions.png' alt='GitHub Actions'/> [GitHub Actions](https://github.com/features/actions) – Continuous Integration
 
 Full tech stack [here](/techstack.md)
 
@@ -28,7 +28,7 @@ Full tech stack [here](/techstack.md)
 # Tech Stack File
 ![](https://img.stackshare.io/repo.svg "repo") [johschmidt42/python-project-johannes](https://github.com/johschmidt42/python-project-johannes)![](https://img.stackshare.io/public_badge.svg "public")
 <br/><br/>
-|7<br/>Tools used|01/05/24 <br/>Report generated|
+|7<br/>Tools used|02/29/24 <br/>Report generated|
 |------|------|
 </div>
 
@@ -89,7 +89,7 @@ Full tech stack [here](/techstack.md)
 
 |NAME|VERSION|LAST UPDATED|LAST UPDATED BY|LICENSE|VULNERABILITIES|
 |:------|:------|:------|:------|:------|:------|
-|[fastapi](https://pypi.org/project/fastapi)|v0.100.0|07/22/23|Johannes Schmidt |MIT|N/A|
+|[fastapi](https://pypi.org/project/fastapi)|v0.100.0|07/22/23|Johannes Schmidt |MIT|[](https://github.com/advisories/GHSA-qf9m-vfgh-m389) (High)<br/>[CVE-2024-24762](https://github.com/advisories/GHSA-2jv5-9r88-3w3p) (High)|
 |[httpx](https://pypi.org/project/httpx)|v0.24.1|07/22/23|Johannes Schmidt |BSD-3-Clause|N/A|
 
 <br/>
